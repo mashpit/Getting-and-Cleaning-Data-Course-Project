@@ -63,7 +63,3 @@
 
 ##Upload data as a txt file.
 write.table(tidy, file = "tidy.txt", row.names = FALSE)
-    
-readdata <- read.table("tidy.txt", header = TRUE)
-    
-View(readdata)
