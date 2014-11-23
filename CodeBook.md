@@ -48,7 +48,7 @@ fBodyGyroMag
 
 fBodyGyroJerkMag”
 
-Means (mean) and standard deviations (std) were calculated for each of these measurements in the original dataset. In the tidy.txt dataset, averages of the means and standard deviations for each measurement were calculated for each subject-activity set. There were 30 subjects in all, and each subject performed six different activities. The “subject” column indicates the numeric subject IDs for each subject, and the “activity” column describes the activity performed in each observation in words. The remaining column names are as follows:
+Means (mean) and standard deviations (std) were calculated for each of these measurements in the original dataset. In the tidy.txt dataset, averages of the means and standard deviations for each measurement were calculated for each subject-activity set. There were 30 subjects in all, and each subject performed six different activities multiple times. The “subject” column indicates the numeric subject IDs for each subject, and the “activity” column describes the activity performed in each observation in words. The remaining column names are as follows:
 
 "tBodyAccmeanX" 
        
