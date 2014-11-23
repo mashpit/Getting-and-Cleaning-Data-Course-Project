@@ -1,11 +1,15 @@
-Feature Selection 
+Variable Selection 
 =================
 
-The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+The variables used in the tidy.txt dataset created for this course project were taken from the “Human Activity Recognition Using Smartphones Dataset Version 1.0” (Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012).
+
+As described in the features_info.txt file included with the original data:
+
+“The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
 Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
 
-Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals).
 
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
@@ -26,34 +30,75 @@ fBodyGyro-XYZ
 fBodyAccMag
 fBodyAccJerkMag
 fBodyGyroMag
-fBodyGyroJerkMag
+fBodyGyroJerkMag”
 
-The set of variables that were estimated from these signals are: 
+Means (mean) and standard deviations (std) were calculated for each of these measurements in the original dataset. In the tidy.txt dataset, averages of the means and standard deviations for each measurement were calculated for each subject-activity set. There were 30 subjects in all, and each subject performed six different activities. The “subject” column indicates the numeric subject IDs for each subject, and the “activity” column describes the activity performed in each observation in words. The remaining column names are as follows:
 
-mean(): Mean value
-std(): Standard deviation
-mad(): Median absolute deviation 
-max(): Largest value in array
-min(): Smallest value in array
-sma(): Signal magnitude area
-energy(): Energy measure. Sum of the squares divided by the number of values. 
-iqr(): Interquartile range 
-entropy(): Signal entropy
-arCoeff(): Autorregresion coefficients with Burg order equal to 4
-correlation(): correlation coefficient between two signals
-maxInds(): index of the frequency component with largest magnitude
-meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-skewness(): skewness of the frequency domain signal 
-kurtosis(): kurtosis of the frequency domain signal 
-bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
-angle(): Angle between to vectors.
+"tBodyAccmeanX"        
+"tBodyAccmeanY"       
+"tBodyAccmeanZ"        
+"tGravityAccmeanX"     
+"tGravityAccmeanY"     
+"tGravityAccmeanZ"    
+"tBodyAccJerkmeanX"    
+"tBodyAccJerkmeanY"    
+"tBodyAccJerkmeanZ"    
+"tBodyGyromeanX"      
+"tBodyGyromeanY"       
+"tBodyGyromeanZ"       
+"tBodyGyroJerkmeanX"   
+"tBodyGyroJerkmeanY"  
+"tBodyGyroJerkmeanZ"   
+"tBodyAccMagmean"      
+"tGravityAccMagmean"   
+"tBodyAccJerkMagmean" 
+"tBodyGyroMagmean"     
+"tBodyGyroJerkMagmean" 
+"fBodyAccmeanX"        
+"fBodyAccmeanY"       
+"fBodyAccmeanZ"        
+"fBodyAccJerkmeanX"    
+”fBodyAccJerkmeanY"    
+”fBodyAccJerkmeanZ"   
+"fBodyGyromeanX"       
+"fBodyGyromeanY"       
+"fBodyGyromeanZ"       
+"fBodyAccMagmean"     
+"fBodyAccJerkMagmean"  
+"fBodyGyroMagmean"     
+"fBodyGyroJerkMagmean" 
+"tBodyAccstdX"        
+"tBodyAccstdY"         
+"tBodyAccstdZ"         
+"tGravityAccstdX"      
+"tGravityAccstdY"     
+"tGravityAccstdZ"      
+"tBodyAccJerkstdX"     
+"tBodyAccJerkstdY"     
+"tBodyAccJerkstdZ"    
+"tBodyGyrostdX"        
+"tBodyGyrostdY"        
+"tBodyGyrostdZ"        
+"tBodyGyroJerkstdX"   
+"tBodyGyroJerkstdY"    
+"tBodyGyroJerkstdZ"    
+"tBodyAccMagstd"       
+"tGravityAccMagstd"   
+"tBodyAccJerkMagstd"   
+"tBodyGyroMagstd"      
+"tBodyGyroJerkMagstd"  
+"fBodyAccstdX"        
+"fBodyAccstdY"         
+"fBodyAccstdZ"         
+"fBodyAccJerkstdX"    
+"fBodyAccJerkstdY"    
+"fBodyAccJerkstdZ"     
+"fBodyGyrostdX"        
+"fBodyGyrostdY"        
+"fBodyGyrostdZ"       
+"fBodyAccMagstd"       
+"fBodyAccJerkMagstd"   
+"fBodyGyroMagstd"      
+"fBodyGyroJerkMagstd" 
 
-Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
-
-gravityMean
-tBodyAccMean
-tBodyAccJerkMean
-tBodyGyroMean
-tBodyGyroJerkMean
-
-The complete list of variables of each feature vector is available in 'features.txt'
+where each variable is an average of the mean or standard deviation of each measurement as described earlier in this document for each subject-activity combination. If the variable name includes the word “mean,” then it is an average of the means of that measurement for a subject-activity pair. If the variable name includes the phrase “std,” then it is an average of the standard deviations of that measurement for a subject-activity set.
