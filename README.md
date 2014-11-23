@@ -1,0 +1,12 @@
+##Getting and Cleaning Data Course Project--Tidy Data
+
+This project involved the modification of data from the “Human Activity Recognition Using Smartphones Dataset Version 1.0” (Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012). The file “run_analysis.R” includes R script as well as comments explaining the purpose of the various lines of code. The file CodeBook.md describes the variables included in the dataset (tidy.txt) created in this project.
+
+The data in “tidy.txt” is in the wide form, which according to the discussion at https://class.coursera.org/getdata-009/forum/thread?thread_id=192 is a valid form of tidy data. This data file presents the average of each variable measured in the aforementioned smartphone study for each activity and each subject. Only those variables pertaining to the mean and standard deviation for each measurement were included in this dataset. Measurements, for the purpose of this course project, has been defined as the time and frequency domain signals collected from the smartphone study. “meanFreq” variables were not included as they only apply to the frequency components and not the time components. Also excluded are the averages of the angle() variable, as the angle() variable is not a measurement, as defined here, but rather a variable estimated from the measurements, the same way the mean and standard deviation are variables estimated from the measurements. 
+
+The names of the variables used in the tidy.txt dataset were modified slightly from the “features” labels used in the original smartphones data. They were changed to fix typos, such as the “BodyBody” typo and to remove characters that are illegal in R, as suggested by a community TA (David Hood) in this discussion forum: https://class.coursera.org/getdata-009/forum/thread?thread_id=182. 
+
+The final, tidy data set resulting from the R code was uploaded as a txt file, called “tidy.txt,” using the ‘write.table’ command. This txt file may be best viewed in R Studio by using 
+	‘data <- read.table(file_path, header = TRUE) 
+    	 View(data)’
+as described in David's Project FAQ course forum (https://class.coursera.org/getdata-009/forum/thread?thread_id=58).
