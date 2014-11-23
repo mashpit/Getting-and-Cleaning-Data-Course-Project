@@ -7,6 +7,6 @@ The data in “tidy.txt” is in the wide form, which according to the discussio
 The names of the variables used in the tidy.txt dataset were modified slightly from the “features” labels used in the original smartphones data. They were changed to fix typos, such as the “BodyBody” typo and to remove characters that are illegal in R, as suggested by a community TA (David Hood) in this discussion forum: https://class.coursera.org/getdata-009/forum/thread?thread_id=182. 
 
 The final, tidy data set resulting from the R code was uploaded as a txt file, called “tidy.txt,” using the ‘write.table’ command. This txt file may be best viewed in R Studio by using 
-	‘data <- read.table(file_path, header = TRUE) 
-    	 View(data)’
+	‘data <- read.table(file_path, header = TRUE)’ then, 
+    	 ‘View(data)’
 as described in David's Project FAQ course forum (https://class.coursera.org/getdata-009/forum/thread?thread_id=58).
