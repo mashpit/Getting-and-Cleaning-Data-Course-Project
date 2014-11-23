@@ -15,21 +15,37 @@ These signals were used to estimate variables of the feature vector for each pat
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
 tBodyAcc-XYZ
+
 tGravityAcc-XYZ
+
 tBodyAccJerk-XYZ
+
 tBodyGyro-XYZ
+
 tBodyGyroJerk-XYZ
+
 tBodyAccMag
+
 tGravityAccMag
+
 tBodyAccJerkMag
+
 tBodyGyroMag
+
 tBodyGyroJerkMag
+
 fBodyAcc-XYZ
+
 fBodyAccJerk-XYZ
+
 fBodyGyro-XYZ
+
 fBodyAccMag
+
 fBodyAccJerkMag
+
 fBodyGyroMag
+
 fBodyGyroJerkMag”
 
 Means (mean) and standard deviations (std) were calculated for each of these measurements in the original dataset. In the tidy.txt dataset, averages of the means and standard deviations for each measurement were calculated for each subject-activity set. There were 30 subjects in all, and each subject performed six different activities. The “subject” column indicates the numeric subject IDs for each subject, and the “activity” column describes the activity performed in each observation in words. The remaining column names are as follows:
